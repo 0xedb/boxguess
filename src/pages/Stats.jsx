@@ -32,8 +32,8 @@ const LeaderBoard = () => {
           <span className="bold text-green-300 w-full text-center">Total of Boxes Open: {stats?.totalPlayCount || 0}</span>
         </div>
       <div className="text-white w-full flex flex-col md:flex-row items-center justify-center md:items-start ">
-        <div className="w-10/12 md:w-[50%] flex flex-col items-start"> 
-             
+        <div className="w-10/12 md:w-[50%] flex flex-col items-start">
+
           <div className="text-2xl p-5 w-full  border-2 border-white flex justify-center">
             <span className="bold text-[#f7d93e] ">Boxes Open</span>
           </div>
@@ -45,27 +45,31 @@ const LeaderBoard = () => {
                   <th className="text-center  p-1 md:p-3">Opened</th>
                 </tr>
               </thead> */}
-              <tbody>                
+              <tbody>
                 <tr className=" " >
                   <td className="text-center  p-1 md:p-3">2 Box - </td>
                   <td className="text-center  p-1 md:p-3">{stats?.totalOf2Boxes || 0}</td>
-                </tr>                     
+                </tr>
                 <tr className=" " >
                   <td className="text-center  p-1 md:p-3">4 Box - </td>
                   <td className="text-center  p-1 md:p-3">{stats?.totalOf4Boxes || 0}</td>
-                </tr>                     
+                </tr>
                 <tr className=" " >
                   <td className="text-center  p-1 md:p-3">6 Box - </td>
                   <td className="text-center  p-1 md:p-3">{stats?.totalOf6Boxes || 0}</td>
-                </tr>                     
+                </tr>
+                <tr className=" " >
+                  <td className="text-center  p-1 md:p-3">8 Box - </td>
+                  <td className="text-center  p-1 md:p-3">{stats?.totalOf6Boxes || 0}</td>
+                </tr>
                 <tr className=" " >
                   <td className="text-center  p-1 md:p-3">12 Box - </td>
                   <td className="text-center  p-1 md:p-3">{stats?.totalOf12Boxes || 0}</td>
-                </tr>                     
+                </tr>
               </tbody>
             </table>
           </div>
-             
+
           <div className="text-2xl p-5 w-full  border-2 border-white mt-10  flex justify-center">
             <span className="bold text-[#f7d93e] w-full text-center">Top 5 overall box openers</span>
           </div>
@@ -97,7 +101,7 @@ const LeaderBoard = () => {
               </tbody>
             </table>
           </div>
-             
+
           <div className="text-2xl p-5 w-full  border-2 border-white mt-10  flex justify-center">
             <span className="bold text-[#f7d93e] ">Daily Leaders</span>
           </div>
@@ -170,7 +174,7 @@ const LeaderBoard = () => {
 
         </div>
         <div className="w-10/12 md:w-[50%] flex flex-col  md:ml-10 mt-10 md:mt-0">
-              
+
           <div className="text-2xl p-5 w-full border-2 border-white flex justify-center">
             <span className="bold text-[#f7d93e] w-full text-center">2 Box open winning percentage</span>
           </div>
@@ -179,7 +183,7 @@ const LeaderBoard = () => {
               <div className="text-xl">{`Win(${Number(49.96 + Number(randomDelta)).toFixed(2)}%)`}</div>
               <div className="text-xl">{`Lose(${Number(50.04 - Number(randomDelta)).toFixed(2)}%)`}</div>
             </div>
-           <PieChart           
+           <PieChart
               className="p-3 rotate-90"
               data={[
                 { title: 'Win', value: 49.96 + Number(randomDelta), color: '#00ff00', key:"win" },
@@ -197,7 +201,7 @@ const LeaderBoard = () => {
                 animate
             />
           </div>
-                          
+
           <div className="text-2xl p-5 w-full border-2 border-white mt-10 flex justify-center">
             <span className="bold text-[#f7d93e] ">Daily Highest Earners</span>
           </div>
